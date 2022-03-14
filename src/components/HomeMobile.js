@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import toast from 'react-simple-toasts';
 
-export default function Home () {
+export default function HomeMobile () {
     const [city, setCity] = useState(null);                     // Estado nombre de ciudad
     const [cityWeather, setCityWeather] = useState(null);       // Estado clima de ciudad
     const [isVisible, setIsVisible] = useState(false);          // Estado control de vistas
@@ -98,11 +98,11 @@ export default function Home () {
     // Condicional que maneja las vistas
     if (!isVisible) {
         return (
-            <div id='container'>
-                <div id='card'>
-                    <h3 id='title'> ¡ Seleccione una ciudad para consultar el clima ! </h3>
+            <div id='containerMob'>
+                <div id='cardMob'>
+                    <h3 id='titleMob'> ¡ Seleccione una ciudad para consultar el clima ! </h3>
                     
-                    <div id='inputContainer'>
+                    <div id='inputContainerMob'>
                         <GooglePlacesAutocomplete
                             apiKey={keyGoogle}
                             apiOptions={{ language: 'es' }}
@@ -113,44 +113,44 @@ export default function Home () {
                         />
                     </div>
 
-                    <button id='btn' onClick={() => getCityData()}> Consultar </button>        
+                    <button id='btnMob' onClick={() => getCityData()}> Consultar </button>        
                 </div>
             </div>
         );    
     } else {
         return (
-            <div id='modalScreen'>
-                <div id='modalCard'>
-                    <div id='modalHeader'>
-                        <div id='iconContainer'>
+            <div id='modalScreenMob'>
+                <div id='modalCardMob'>
+                    <div id='modalHeaderMob'>
+                        <div id='iconContainerMob'>
                             <FontAwesomeIcon
                                 icon={faArrowRotateRight}
-                                id='icons'
+                                id='iconsMob'
                                 onClick={() => getCityData()}
                             />
                         </div>
 
-                        <h3 id='title'> {city.label} </h3>
+                        <h3 id='titleMob'> {city.label} </h3>
 
-                        <div id='iconContainer'>
+                        <div id='iconContainerMob'>
                             <FontAwesomeIcon
                                 icon={faCircleXmark}
-                                id='icons'
+                                id='iconsMob'
                                 onClick={() => reset()}
                             />
                         </div>
                     </div>
 
-                    <div id='cardBody'>
-                        <div id='temperature'>
+                    <div id='cardBodyMob'>
+                        <div id='temperatureMob'>
                             <div>
-                                <img src={`http://openweathermap.org/img/wn/${cityWeather.icon}@2x.png`} id='weatherIcons'/>
+                                <img src={`http://openweathermap.org/img/wn/${cityWeather.icon}@2x.png`} id='weatherIconsMob'/>
                             </div>
-                            {cityWeather.temp} <span id='celsius'> °C </span>
+                            {cityWeather.temp} <span id='celsiusMob'> °C </span>
                         </div>
                         
-                        <div id='dateTimeContainer'>
-                            <div id='dateTime'>
+                        <div id='dateTimeContainerMob'>
+                            <div id='dateTimeMob'>
                                 <div>
                                     {cityWeather.time}
                                 </div>
@@ -167,8 +167,8 @@ export default function Home () {
                         </div>
                     </div>
 
-                    <div id='details'>
-                        <div id='data'>
+                    <div id='detailsMob'>
+                        <div id='dataMob'>
                             <div className='itemData'> Sensación Térmica: {cityWeather.feels_like} °C </div>
                             <div className='itemData'> Temperatura Mínima: {cityWeather.temp_min} °C </div>
                             <div className='itemData'> Temperatura Máxima: {cityWeather.temp_max} °C </div>

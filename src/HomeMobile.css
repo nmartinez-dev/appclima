@@ -1,5 +1,5 @@
 /* --- Home --- */
-#container {
+#containerMob {
   contain: content;
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@
   background-size: cover;
 }
 
-#card {
+#cardMob {
   width: 80vw;
   height: 50vh;
   display: flex;
@@ -21,18 +21,19 @@
   box-shadow: 0vh 0vh 1vh rgba(84, 122, 114, 0.911);
 }
 
-#title {
+#titleMob {
   text-align: center;
   font-size: 2.7vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(78, 78, 78);
+  margin: 1vh;
 }
 
-#inputContainer {
+#inputContainerMob {
   margin: 5vh;
 }
 
-#btn {
+#btnMob {
   align-self: center;
   height: 7vh;
   width: 25vw;
@@ -45,7 +46,7 @@
 }
 
 /* --- Modal --- */
-#modalScreen {
+#modalScreenMob {
   contain: content;
   display: flex;
   justify-content: center;
@@ -56,7 +57,7 @@
   background-blend-mode: darken;
 }
 
-#modalCard {
+#modalCardMob {
   width: 80vw;
   height: 70vh;
   display: flex;
@@ -68,24 +69,24 @@
   border-radius: 3vh;
 }
 
-#modalHeader {
+#modalHeaderMob {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: "100%";
 }
 
-#iconContainer {
+#iconContainerMob {
   align-self: center;
   margin: 3vw;
 }
 
-#icons {
+#iconsMob {
   height: 4vh;
   color: rgb(78, 78, 78);
 }
 
-#cardBody {
+#cardBodyMob {
   height: 30vh;
   display: flex;
   flex-direction: row;
@@ -93,37 +94,37 @@
   align-items: center;
 }
 
-#temperature {
+#temperatureMob {
   font-size: 5vh;
   color: rgb(127, 194, 180);
   text-shadow: 0vh 0vh 2vh rgba(167, 226, 211, 0.6);
 }
 
-#dateTimeContainer {
+#dateTimeContainerMob {
   display: flex;
   flex-direction: row;
 }
 
-#weatherIcons {
+#weatherIconsMob {
   height: 10vh;
   filter: drop-shadow(0vh 0vh 2vh rgba(41, 54, 51, 0.6));
 }
 
-#dateTime {
+#dateTimeMob {
   align-self: center;
   line-height: 3.5vh;
 }
 
-#celsius {
+#celsiusMob {
   font-size: 3vh;
 }
 
-#details {
+#detailsMob {
   display: flex;
   flex-direction: row;
 }
 
-#data {
+#dataMob {
   width: 80vw;
   height: 22vh;
   line-height: 3.5vh;
