@@ -1,0 +1,150 @@
+/* --- Home --- */
+#container {
+  contain: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../public/background.jpg");
+  background-size: cover;
+}
+
+#card {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(231, 250, 246, 0.911);
+  border: none;
+  border-radius: 3vh;
+  box-shadow: 0vh 0vh 1vh rgba(84, 122, 114, 0.911);
+}
+
+#title {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(78, 78, 78);
+}
+
+#inputContainer {
+  margin: 5vh;
+}
+
+#btn {
+  align-self: center;
+  height: 7vh;
+  width: 10vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(78, 78, 78);
+  background-color: rgb(250, 201, 127);
+  border: none;
+  border-radius: 1vh;
+  box-shadow: 0vh 0vh 1vh rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: rgb(127, 194, 180);
+  color: aliceblue;
+}
+
+#btn:active {
+  background-color: rgb(250, 201, 127);
+}
+
+/* --- Modal --- */
+#modalScreen {
+  contain: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url("../public/background.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+#modalCard {
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(231, 250, 246);
+  box-shadow: 0vh 0vh 3vh rgba(0, 0, 0, 0.808);
+  border-style: solid;
+  border-width: 0.1vh;
+  border-radius: 3vh;
+}
+
+#modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: "100%";
+}
+
+#iconContainer {
+  align-self: center;
+  margin: 1vw;
+}
+
+#icons {
+  height: 4vh;
+  color: rgb(78, 78, 78);
+}
+
+#icons:hover {
+  cursor: pointer;
+  color: rgb(250, 201, 127);
+}
+
+#icons:active {
+  color: rgb(127, 194, 180);
+}
+
+#cardBody {
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#temperature {
+  font-size: 15vh;
+  color: rgb(127, 194, 180);
+  text-shadow: 0vh 0vh 2vh rgba(167, 226, 211, 0.6);
+}
+
+#dateTimeContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#weatherIcons {
+  height: 25vh;
+  filter: drop-shadow(0vh 0vh 2vh rgba(41, 54, 51, 0.6));
+}
+
+#dateTime {
+  align-self: center;
+}
+
+#celsius {
+  font-size: 9vh;
+}
+
+#details {
+  display: flex;
+  flex-direction: row;
+}
+
+#data {
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
