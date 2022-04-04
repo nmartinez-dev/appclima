@@ -23,7 +23,7 @@ export default function Home () {
                 var urlGoogle = `https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${lng}&timestamp=0&key=${keyGoogle}`;
                 var dateTime = await (await fetch(urlGoogle)).json();
 
-                if (data.cod == '200') {
+                if (data.cod === '200') {
                     let dateNow = new Date();                                                               // Time actual
                     let timestampNow = dateNow.getTime();                                                   // Timestamp actual local
                     let timestampUtc = timestampNow + 10800000;                                             // -3GMT = 10800, *1000 mseg a seg
@@ -36,7 +36,7 @@ export default function Home () {
                     if (minutes < 10) { minutes = '0' + minutes; };
             
                     let time = `${hour}:${minutes} hs.`;
-                    let date = `${timeCity.getDate()}/${timeCity.getMonth()}/${timeCity.getFullYear()}`; 
+                    let date = `${timeCity.getDate()}/${timeCity.getMonth()+1}/${timeCity.getFullYear()}`; 
                     
                     var weather = {                                     // Objeto resultante, objetivo
                         sky:        data.weather[0].description,
@@ -148,7 +148,7 @@ export default function Home () {
                         
                         <div id='dateTimeContainer'>
                             <div>
-                                <img src={`http://openweathermap.org/img/wn/${cityWeather.icon}@2x.png`} id='weatherIcons'/>
+                                <img src={`http://openweathermap.org/img/wn/${cityWeather.icon}@2x.png`} id='weatherIcons' alt=''/>
                             </div>
 
                             <div id='dateTime'>
